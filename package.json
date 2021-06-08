@@ -1,10 +1,10 @@
 {
   "name": "fastly-key-purge",
   "version": "0.1.0",
-  "description": "Cloud function to hit Fastly's API to purge surrogate key",
+  "description": "Cloud function to hit Fastly's API to purge the CDN cache with a surrogate key",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "deploy": "gcloud  functions deploy zestyFastlyPurge --env-vars-file .env.yml --runtime nodejs10 --trigger-http --project YOUR-PROJECT-NAME"
   },
   "repository": {
     "type": "git",
