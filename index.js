@@ -29,8 +29,9 @@ const exportFastlyKeyPurge = async (req, res) => {
   }
   
   var cacheTags = JSON.parse(req.body)
-  
-   // purge the instances system cache, requires the Instance ZUID, check to see if zuid starts with 8- to represent an instance zuid https://zesty-io.github.io/zuid-specification/
+  zuid = cacheTags.objects[0]
+
+  // purge the instances system cache, requires the Instance ZUID, check to see if zuid starts with 8- to represent an instance zuid https://zesty-io.github.io/zuid-specification/
   // this is done because its possible to purge other tags (not instance zuids) in Akamai 
   if(zuid.includes('8-')){
     https.get(`https://us-central1-zesty-prod.cloudfunctions.net/redisPurge?zuid=${zuid}`);
