@@ -1,0 +1,30 @@
+{
+  "name": "fastly-key-purge",
+  "version": "0.1.0",
+  "description": "Cloud function to hit Fastly's API to purge surrogate key",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zesty-io/fastly-key-purge.git"
+  },
+  "keywords": [
+    "fastly",
+    "nodejs",
+    "purge",
+    "zesty-io"
+  ],
+  "author": "Zesty.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zesty-io/fastly-key-purge/issues"
+  },
+  "homepage": "https://github.com/zesty-io/fastly-key-purge#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "env-yaml": "^0.1.2",
+    "fastly": "^2.2.1"
+  }
+}
